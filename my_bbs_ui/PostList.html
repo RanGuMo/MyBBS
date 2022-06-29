@@ -51,7 +51,7 @@
                     <tr>
                         <td style="width: 32px;">
                         <img src="./assets/images/folder_new.gif" alt=""/></td>
-                        <td><span>[帖子种类]</span> 帖子标题</td>
+                        <td><span><a class="post-type" href="javascript:;">[帖子种类]</a></span> <a href="./PostDetail.html">帖子标题</a></td>
                         <td style="width: 135px;">
                             <p>墨苒孤</p>
                             <p>2022-06-29 21:00</p>
@@ -128,6 +128,17 @@
         padding: 0;
          box-sizing: border-box;/*让宽度包含于padding中 */
     }
+    a{
+        text-decoration: none;
+        color: #333;
+
+    }
+    a.post-type{
+        color: blue;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
     .header{
         width: 100%;
         height: 36px;
@@ -178,7 +189,7 @@
    }
    .post-list table thead tr td span{
        margin-left: 16px;
-       color: blue;
+       color: blue !important;
    }
    .post-list table tr td{
        border-bottom: 1px solid #ccc;
