@@ -13,17 +13,17 @@
     <div id="loginPage">
         <h3>用户登录</h3>
         <p>
-            <el-input placeholder="请输入登录账号">
+            <el-input placeholder="请输入登录账号" v-model="userNo">
                 <template slot="prepend">账号:</template>
               </el-input>
         </p>
         <p>
-            <el-input placeholder="请输入登录密码">
+            <el-input placeholder="请输入登录密码" show-password v-model="password">
                 <template slot="prepend">密码:</template>
               </el-input>
         </p>
         <p>
-            <el-checkbox>记住我</el-checked>
+            <el-checkbox v-model="remMe">记住我</el-checked>
         </p>
         <p>
             <el-button type="primary">登录</el-button>
@@ -35,7 +35,12 @@
 </body>
 <script>
      new Vue({
-            el:"#loginPage"
+            el:"#loginPage",
+            data:{
+                userNo:'1126146235',
+                password:'111',
+                remMe:true
+            }
         })
 </script>
 <style>
