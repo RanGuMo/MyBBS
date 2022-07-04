@@ -5,12 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登录页面</title>
+    <script src="./lib/vue.js"></script>
+    <script src="./lib/elementui.js"></script>
+    <link rel="stylesheet" href="./lib/elementui.css">
 </head>
 <body>
     <div id="loginPage">
+        <h3>用户登录</h3>
+        <p>
+            <el-input placeholder="请输入登录账号">
+                <template slot="prepend">账号:</template>
+              </el-input>
+        </p>
+        <p>
+            <el-input placeholder="请输入登录密码">
+                <template slot="prepend">密码:</template>
+              </el-input>
+        </p>
+        <p>
+            <el-checkbox>记住我</el-checked>
+        </p>
+        <p>
+            <el-button type="primary">登录</el-button>
+            <el-button type="info">返回</el-button>
+        </p>
+       
 
     </div>
 </body>
+<script>
+     new Vue({
+            el:"#loginPage"
+        })
+</script>
 <style>
     *{
         margin: 0;
@@ -18,10 +45,26 @@
     }
     #loginPage{
         width: 586px; 
-        height: 400px;
+        height: 300px;
         box-shadow: 0 0 10px #666;/*  x轴，y轴，阴影大小，颜色 */
         margin: auto;
         margin-top: 10%;
     }
+    #loginPage h3{
+        text-align: center;
+        padding: 16px 0;
+    }
+    #loginPage p{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    #loginPage p:last-child{
+        text-align: center;
+    }
+    #loginPage p button{
+        width: 48%;
+    }
+
 </style>
 </html>
