@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登录页面</title>
+    <script src="./lib/axios.js"></script>     <!-- 引入axios -->
     <script src="./lib/vue.js"></script>
     <script src="./lib/elementui.js"></script>
     <link rel="stylesheet" href="./lib/elementui.css">
@@ -26,7 +27,7 @@
             <el-checkbox v-model="remMe">记住我</el-checked>
         </p>
         <p>
-            <el-button type="primary">登录</el-button>
+            <el-button type="primary" v-on:click="login">登录</el-button>
             <el-button type="info">返回</el-button>
         </p>
        
@@ -40,7 +41,19 @@
                 userNo:'1126146235',
                 password:'111',
                 remMe:true
-            }
+            },
+            methods: {
+                login(){
+                    var userNo = this.userNo;
+                    var password = this.password;
+                    var remMe = this.remMe;
+                    axios.get("").then(
+                        function(res){
+                            console.log(res);
+                        }
+                    )
+                }
+            },
         })
 </script>
 <style>
