@@ -47,7 +47,7 @@
                     var userNo = this.userNo;
                     var password = this.password;
                     var remMe = this.remMe;
-                    axios.get("").then(
+                    axios.get("http://localhost:5000/login/"+userNo+"/"+password).then(
                         function(res){
                             console.log(res);
                         }
