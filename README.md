@@ -30,3 +30,7 @@ BBS论坛开发
                     )
                  }
 ```
+## 2.状态保持（说白了就是session的使用） 下面为session 的原理
+![状态保持](https://github.com/RanGuMo/MyBBS/blob/master/my_bbs_ui/assets/images/1657034294668.jpg)
+客户端  点击 登录------》服务器端进行 登录校验 生成一个sessionid 并响应 回给 客户端 
+下一次请求是 客户端（浏览器）总是会携带着seesionid 来请求 我们就可以通过获取 sessionid 来获取用户的信息了
