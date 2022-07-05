@@ -45,9 +45,16 @@
             methods: {
                 login(){
                     var userNo = this.userNo;
-                    var password = this.password;
+                    var pwd = this.password;
                     var remMe = this.remMe;
-                    axios.get("http://localhost:5000/login/"+userNo+"/"+password).then(
+                    //方式一：
+                    // axios.get("http://localhost:5000/login/"+userNo+"/"+pwd).then(
+                    //     function(res){
+                    //         console.log(res);
+                    //     }
+                    // )
+                    //方式二：
+                    axios.get("http://localhost:5000/login/",{params:{userNo,password:pwd}}).then(
                         function(res){
                             console.log(res);
                         }
