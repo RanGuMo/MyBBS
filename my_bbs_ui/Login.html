@@ -28,7 +28,7 @@
         </p>
         <p>
             <el-button type="primary" v-on:click="login">登录</el-button>
-            <el-button type="info">返回</el-button>
+            <el-button type="info" v-on:click="back">返回</el-button>
         </p>
        
 
@@ -69,6 +69,9 @@
                             console.log(res);
                         }
                     )
+                },
+                back(){
+                    history.go(-1);//返回上一级
                 }
             },
         })
