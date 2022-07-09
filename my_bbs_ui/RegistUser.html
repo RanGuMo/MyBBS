@@ -35,7 +35,18 @@
         },
         methods: {
             regist(){
-
+                // 后端必须加上 ApiController 特性
+                // 且必须 使用 对象来接收 Users users
+                //而不是 string userName,string userNo,string password
+                axios.post(
+                        "http://localhost:5000/login",
+                        {
+                            userName: this.userName,
+                            userNo: this.userNo,
+                            password: this.password
+                        }).then(function (res) {
+                            console.log(res);
+                        })
             }
         },
     })
