@@ -38,6 +38,7 @@
                 // 后端必须加上 ApiController 特性
                 // 且必须 使用 对象来接收 Users users
                 //而不是 string userName,string userNo,string password
+                // 因为使用 axios.post 发起的请求数据格式是json
                 axios.post(
                         "http://localhost:5000/login",
                         {
