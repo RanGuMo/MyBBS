@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册用户</title>
+    <script src="./lib/axios.js"></script>
+    <script src="./lib/vue.js"></script>
+    <script src="./lib/elementui.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./lib/elementui.css">
+</head>
+<body>
+    <div id="registPage">
+        <div class="regist-pad">
+            <h2>用户注册</h2>
+            <el-input v-model="userName" placeholder="请输入用户名"></el-input>
+            <el-input v-model="userNo" placeholder="请输入用户账号"></el-input>
+            <el-input v-model="password" placeholder="请输入登陆密码"></el-input>
+            <el-input v-model="password2" placeholder="请输入登陆密码"></el-input>
+            <el-button type="primary" @click="regist">注册用户</el-button>
+        </div>
+    </div>
+</body>
+
+<script>
+    new Vue({
+        el:"#registPage",
+        data:{
+            userName:"",
+            userNo:"",
+            password:"",
+            password2:""
+        },
+        methods: {
+            regist(){
+
+            }
+        },
+    })
+</script>
+<style>
+    .regist-pad{
+        width: 600px;
+        padding: 20px;
+        margin: auto;
+        margin-top: 10%;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-shadow: 0 0 10px #ccc;
+    }
+    h2{
+        text-align: center;
+        margin-top: 0;
+    }
+    .el-input{
+        margin-bottom: 20px;
+    }
+    .el-button{
+        width: 100%;
+    }
+</style>
+
+</html>
