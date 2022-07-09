@@ -59,6 +59,10 @@ BBS论坛开发
             },
             methods: {
                 login(){
+                  var userInfo ={
+                        userNo:'',
+                        password:''
+                    };
                     var userNo = this.userNo;
                     var pwd = this.password;
                     var remMe = this.remMe;
