@@ -33,22 +33,6 @@ BBS论坛开发
 ## 2.状态保持（说白了就是session的使用） 下面为session 的原理
 ![状态保持](https://github.com/RanGuMo/MyBBS/blob/master/my_bbs_ui/assets/images/1657034294668.jpg)
 
-## 3.ajax 发起请求
-```html
- // 下面这种方式Ajax ，引入 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-                    // 后端不用加上 ApiController 特性
-                    // 数据格式 是Form 表格格式提交的 
-                    // string userName,string userNo,string password 可以接收到
-                    // $.post("http://localhost:5000/login",
-                    //     {
-                    //         userName: this.userName,
-                    //         userNo: this.userNo,
-                    //         password: this.password
-                    //     }, function (res) {
-                    //         console.log(res);
-                    //     });  
-```
-
 
 客户端  点击 登录------》服务器端进行 登录校验 生成一个sessionid 并响应 回给 客户端 
 下一次请求是 客户端（浏览器）总是会携带着seesionid 来请求 我们就可以通过获取 sessionid 来获取用户的信息了
@@ -109,3 +93,19 @@ BBS论坛开发
             },
         })
 ```
+## 5.ajax 发起请求
+```html
+ // 下面这种方式Ajax ，引入 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+                    // 后端不用加上 ApiController 特性
+                    // 数据格式 是Form 表格格式提交的 
+                    // string userName,string userNo,string password 可以接收到
+                    // $.post("http://localhost:5000/login",
+                    //     {
+                    //         userName: this.userName,
+                    //         userNo: this.userNo,
+                    //         password: this.password
+                    //     }, function (res) {
+                    //         console.log(res);
+                    //     });  
+```
+
