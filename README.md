@@ -93,3 +93,19 @@ BBS论坛开发
             },
         })
 ```
+## 5.ajax 发起请求
+```html
+ // 下面这种方式Ajax ，引入 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+                    // 后端不用加上 ApiController 特性
+                    // 数据格式 是Form 表格格式提交的 
+                    // string userName,string userNo,string password 可以接收到
+                    // $.post("http://localhost:5000/login",
+                    //     {
+                    //         userName: this.userName,
+                    //         userNo: this.userNo,
+                    //         password: this.password
+                    //     }, function (res) {
+                    //         console.log(res);
+                    //     });  
+```
+
