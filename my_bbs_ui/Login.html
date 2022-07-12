@@ -39,9 +39,10 @@
      new Vue({
             el:"#loginPage",
             data:{
-                userNo:'',
-                password:'',
-                remMe:true
+                userNo:"",
+                password:"",
+                remMe:true,
+                userName:null
             },
             mounted() {//页面挂载时 
                 //将 存储在localStorage 中的userInfo里面的值取出
@@ -54,9 +55,8 @@
             methods: {
                 login(){
                     var userInfo ={
-                        userNo:'',
-                        password:'',
-                        userName:null
+                        userNo:"",
+                        password:""
                     };
                     var userNo = this.userNo;
                     var pwd = this.password;
