@@ -12,10 +12,14 @@
 <body>
     <div id="postList">
         <div class="header">
-            <div class="not-login">
+            <div class="not-login" v-if="userName==null">
                 <span>登录</span> 
                 <span>注册</span>
             </div>
+            <div class="logined">
+                <span>{{userName}}</span> 
+                <span>注销</span>
+            </div> 
         </div>
 
         <div class="plate-show">
@@ -120,6 +124,9 @@
 <script>
     new Vue({
         el:"#postList",
+        data:{
+            userName:localStorage["userName"]
+        }
     })
 </script>
 <style>
@@ -146,7 +153,7 @@
         background-color: #000;
         text-align: right;
     }
-   .header .not-login span{
+   .header .not-login .logined span{
        color: #fff;      
    }
    .plate-show{
