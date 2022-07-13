@@ -16,9 +16,9 @@
                 <span>登录</span> 
                 <span>注册</span>
             </div>
-            <div class="logined">
+            <div class="logined" v-else>
                 <span>{{userName}}</span> 
-                <span>注销</span>
+                <span><a @click="logout">注销</a></span>
             </div> 
         </div>
 
@@ -125,8 +125,15 @@
     new Vue({
         el:"#postList",
         data:{
-            userName:localStorage["userName"]
-        }
+            userName:sessionStorage["userName"]
+        },
+        methods: {
+            logout(){
+                localStorage.clear();
+                sessionStorage.clear();
+                this.userName = null;
+            }
+        },
     })
 </script>
 <style>
@@ -153,7 +160,9 @@
         background-color: #000;
         text-align: right;
     }
-   .header .not-login .logined span{
+   .header .not-login  span,
+   .header .logined  span
+   {
        color: #fff;      
    }
    .plate-show{

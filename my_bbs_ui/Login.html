@@ -46,7 +46,7 @@
             },
             mounted() {//页面挂载时 
                 //将 存储在localStorage 中的userInfo里面的值取出
-                var userInfo = JSON.parse(localStorage["userInfo"]);//解析json
+                var userInfo =localStorage["userInfo"] && JSON.parse(localStorage["userInfo"]);//localStorage["userInfo"] 不为空就解析json
                 this.userNo = userInfo.userNo;
                 this.password = userInfo.password;
                 //由于取出来的值是 字符串 类型，需要进行转换一下
@@ -61,6 +61,7 @@
                     var userNo = this.userNo;
                     var pwd = this.password;
                     var remMe = this.remMe;
+                    var userName= this.userName;
                     //方式一：
                     // axios.get("http://localhost:5000/login/"+userNo+"/"+pwd).then(
                     //     function(res){
@@ -83,7 +84,7 @@
                             //发送axions请求时 将后端的值进行localStorage 存储，页面挂载时取出
                             localStorage["token"] = res.data.token;
                             localStorage["isRem"] = remMe;
-                            localStorage["userName"] = userName;
+                            sessionStorage["userName"] = res.data.userName;
                             if(remMe){//勾选`记住我` 需要处理的内容
                                 userInfo.userNo = userNo;
                                 userInfo.password  = res.data.password;//后端经过MD5加密的值
