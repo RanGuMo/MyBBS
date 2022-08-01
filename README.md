@@ -1,5 +1,4 @@
-# MyBBS
-BBS论坛开发
+# MyBBS (BBS论坛开发(前端))
 ## 1.axios 的三种方式：
 ```html
                login(){
